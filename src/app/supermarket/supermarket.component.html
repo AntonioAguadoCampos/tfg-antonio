@@ -1,0 +1,24 @@
+<app-header></app-header>
+<div class="container">
+    <p-card
+    *ngFor="let item of items"
+    [style]="{ height: '170px' }"
+    [ngStyle]="{'visibility': item ? 'visible' : 'hidden'}"
+  >
+    <div class="flex justify-content-around align-items-center w-full" *ngIf="item">
+      <div>
+        <img [src]="item.src" style="width: 100px; height: 100px;" />
+      </div>
+      <div class="flex justify-content-around align-items-center" *ngIf="item">
+        <div class="flex flex-column align-items-center justify-content-between" style="height: 90px;">
+          <div class="flex gap-6">
+            <span>{{item.name}}</span>
+            <span>{{item.price}}</span>
+          </div>
+          <p-button icon="pi pi-shopping-cart" (onClick)="onBuyItem(item)" [disabled]="item.inCart"/>
+        </div>
+      </div>
+    </div>
+  </p-card>
+</div>
+
