@@ -6,10 +6,6 @@ const routes: Routes = [
     {
       path: "",
       component: SupermarketComponent
-    },
-    {
-      path: ':category',
-      component: SupermarketComponent
     }
 ];
 

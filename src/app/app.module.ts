@@ -12,6 +12,8 @@ import { CommonModule } from '@angular/common';
 
 import { ButtonModule } from 'primeng/button';
 import { HttpClientModule } from '@angular/common/http';
+import { HeaderComponent } from './components/header/header.component';
+import { ToolbarModule } from 'primeng/toolbar';
 
 
 
@@ -19,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [
     AppComponent,
     HomeComponent,
+    HeaderComponent
   ],
   imports: [
     CommonModule,
@@ -28,6 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     ButtonModule,
     HttpClientModule,
+    ToolbarModule
   ], 
   providers: [],
   bootstrap: [AppComponent]
